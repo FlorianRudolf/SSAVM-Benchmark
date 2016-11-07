@@ -1,4 +1,4 @@
-Benchmark Suite for the PhD Thesis "Symmetry- and Similarity Aware Mesh Generation"
+Benchmark Suite for the PhD Thesis "Symmetry- and Similarity Aware Volumetric Meshing"
 
 ViennaGrid [1] and ViennaMesh [2] are required
 
