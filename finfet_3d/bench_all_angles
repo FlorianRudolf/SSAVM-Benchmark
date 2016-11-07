@@ -1,0 +1,9 @@
+#!/usr/bin/python
+
+import sys
+import os
+
+for min_angle in [30, 15, 10]:
+  for cell_size in [1024, 512, 256, 128, 64, 32, 16, 8, 4, 2, 1]:
+    print( "\n\nbench finfet 3d " + str(cell_size) + " " + str(min_angle) + "\n\n")
+    os.system( "../tools/build_release/bench_reflection -b 10 -c " + str(cell_size) + " --min-angle-pi-factor " + str(min_angle) + " -i 30 -o \"trigate\" data/quarter_trigate.poly" )

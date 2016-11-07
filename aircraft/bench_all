@@ -1,0 +1,9 @@
+#!/usr/bin/python
+
+import sys
+import os
+
+for min_angle in [36, 18, 9, 6]:
+  for cell_size in [1024, 512, 256, 128, 64, 32, 16, 8, 4, 2, 1, 0.5, 0.25]:
+    print( "\n\nbench aircraft 2d " + str(cell_size) + " " + str(min_angle) + "\n\n")
+    os.system( "../tools/build_release/bench_reflection -b 100 -c " + str(cell_size) + " --min-angle-pi-factor " + str(min_angle) + " -o \"aircraft\" data/half_aircraft_geometry.vtu" )

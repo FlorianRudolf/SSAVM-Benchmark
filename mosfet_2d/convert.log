@@ -1,0 +1,17 @@
+(1) info: Using file type VTK
+(1) info: Reading mesh from file "mosfet2d_original.pvd"
+(5) info: Found .vtu/.pvd extension, using ViennaGrid VTK Reader
+(1) info: Successfully read a mesh
+(1) info:   Geometric dimension = 2
+(1) info:   Cell dimension = 2
+(1) info:   Vertex count =  746
+(1) info:   Cell count = 1401
+(1) info: Number of vertices of mesh to write 746
+(1) info: Number of cells of mesh to write 1401
+(1) info: Writing mesh to file "mosfet_2d.vtu"
+(1) info: Using file type VTK
+(5) stack: Opening stack 'Mesh 0'
+  (1) info: Using filename "mosfet_2d"
+  (1) info: Found geometric dimension: 2
+  (1) info: Found cell dimension: 2
+(5) stack: Closing stack 'Mesh 0' (took 0.041622sec)

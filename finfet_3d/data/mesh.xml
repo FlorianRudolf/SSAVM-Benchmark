@@ -1,0 +1,13 @@
+<algorithm type="plc_reader" name="input">
+  <parameter name="filename" type="string">quarter_trigate.poly</parameter>
+</algorithm>
+
+<algorithm type="tetgen_make_mesh" name="mesher">
+  <default_source>input</default_source>
+</algorithm>
+
+<algorithm type="mesh_writer">
+  <default_source>mesher</default_source>
+  <parameter name="filename" type="string">quater_trigate_meshed.vtu</parameter>
+</algorithm>
+

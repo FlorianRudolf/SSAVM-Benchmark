@@ -1,0 +1,9 @@
+#!/usr/bin/python
+
+import sys
+import os
+
+for rer in [2.5, 2, 1.5]:
+  for cell_size in [1024, 512, 256, 128, 64, 32, 16, 8, 4, 2, 1]:
+    print( "\n\nbench finfet 3d " + str(cell_size) + " " + str(rer) + "\n\n")
+    os.system( "../tools/build_release/bench_reflection -b 10 -c " + str(cell_size) + " -r " + str(rer) + " -o \"trigate\" data/quarter_trigate.poly" )

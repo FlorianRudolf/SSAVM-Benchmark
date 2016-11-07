@@ -1,0 +1,45 @@
+<algorithm type="mesh_reader" name="input">
+  <parameter name="filename" type="string">aircraft_boundary.vtu</parameter>
+</algorithm>
+
+<algorithm type="affine_transform" name="rotate">
+  <default_source>input</default_source>
+
+  <parameter name="matrix" type="point">(0,1)</parameter>
+  <parameter name="matrix" type="point">(-1,0)</parameter>
+  <parameter name="translate" type="point">(2.396200e+02,3.914622e+02)</parameter>
+</algorithm>
+
+<algorithm type="line_coarsening" name="coarsening">
+  <default_source>rotate</default_source>
+  <parameter name="angle" type="double">3.14</parameter>
+</algorithm>
+
+<algorithm type="mesh_writer">
+  <default_source>coarsening</default_source>
+  <parameter name="filename" type="string">aircraft_boundary_rotated.vtu</parameter>
+</algorithm>
+
+
+
+<algorithm type="mesh_reader" name="half_input">
+  <parameter name="filename" type="string">half_aircraft_boundary.vtu</parameter>
+</algorithm>
+
+<algorithm type="affine_transform" name="half_rotate">
+  <default_source>half_input</default_source>
+
+  <parameter name="matrix" type="point">(0,1)</parameter>
+  <parameter name="matrix" type="point">(-1,0)</parameter>
+  <parameter name="translate" type="point">(1.8475587e+02,430.01)</parameter>
+</algorithm>
+
+<algorithm type="line_coarsening" name="half_coarsening">
+  <default_source>half_rotate</default_source>
+  <parameter name="angle" type="double">3.14</parameter>
+</algorithm>
+
+<algorithm type="mesh_writer">
+  <default_source>half_coarsening</default_source>
+  <parameter name="filename" type="string">half_aircraft_boundary_rotated.vtu</parameter>
+</algorithm>

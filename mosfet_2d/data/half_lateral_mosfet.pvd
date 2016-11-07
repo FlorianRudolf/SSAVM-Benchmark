@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<VTKFile type="Collection" version="0.1" byte_order="LittleEndian" compressor="vtkZLibDataCompressor">
+<Collection>
+    <DataSet part="0" file="half_lateral_mosfet_0.vtu" name="0"/>
+    <DataSet part="1" file="half_lateral_mosfet_1.vtu" name="1"/>
+    <DataSet part="3" file="half_lateral_mosfet_3.vtu" name="3"/>
+    <DataSet part="5" file="half_lateral_mosfet_5.vtu" name="5"/>
+    <DataSet part="6" file="half_lateral_mosfet_6.vtu" name="6"/>
+    <DataSet part="7" file="half_lateral_mosfet_7.vtu" name="7"/>
+  </Collection>
+</VTKFile>

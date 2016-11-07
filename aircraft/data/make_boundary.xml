@@ -1,0 +1,39 @@
+<algorithm type="mesh_reader" name="input">
+  <parameter name="filename" type="string">../aircraft_c1024_a0.0872665.vtu</parameter>
+</algorithm>
+
+<algorithm type="extract_boundary" name="boundary">
+    <default_source>input</default_source>
+</algorithm>
+
+<algorithm type="line_coarsening" name="coarsening">
+  <default_source>boundary</default_source>
+  <parameter name="angle" type="double">3.14</parameter>
+</algorithm>
+
+<algorithm type="mesh_writer">
+  <default_source>boundary</default_source>
+  <parameter name="filename" type="string">aircraft_rotated_geometry.vtu</parameter>
+</algorithm>
+
+
+<algorithm type="hyperplane_clip" name="clip">
+  <default_source>input</default_source>
+  <parameter name="hyperplane_point" type="point">(0,0)</parameter>
+  <parameter name="hyperplane_normal" type="point">(1,0)</parameter>
+</algorithm>
+
+<algorithm type="extract_boundary" name="half_boundary">
+    <default_source>clip</default_source>
+</algorithm>
+
+<algorithm type="line_coarsening" name="half_coarsening">
+  <default_source>half_boundary</default_source>
+  <parameter name="angle" type="double">3.14</parameter>
+</algorithm>
+
+<algorithm type="mesh_writer">
+  <default_source>half_boundary</default_source>
+  <parameter name="filename" type="string">half_aircraft_rotated_geometry.vtu</parameter>
+</algorithm>
+

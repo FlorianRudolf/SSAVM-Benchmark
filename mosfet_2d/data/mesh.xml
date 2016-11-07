@@ -1,0 +1,22 @@
+<algorithm type="mesh_reader" name="input">
+  <parameter name="filename" type="string">half_lateral_mosfet.pvd</parameter>
+</algorithm>
+
+<algorithm type="triangle_make_mesh" name="mesher">
+  <default_source>input</default_source>
+
+<!--  <parameter name="seed_points" type="seed_point">(-30,0);0</parameter>
+  <parameter name="seed_points" type="seed_point">(-150,0);1</parameter>
+  <parameter name="seed_points" type="seed_point">(150,0);2</parameter>
+  <parameter name="seed_points" type="seed_point">(-150,60);3</parameter>
+  <parameter name="seed_points" type="seed_point">(150,60);4</parameter>
+  <parameter name="seed_points" type="seed_point">(0,-65);5</parameter>
+  <parameter name="seed_points" type="seed_point">(0,50);6</parameter>
+  <parameter name="seed_points" type="seed_point">(0,80);7</parameter>-->
+</algorithm>
+
+<algorithm type="mesh_writer">
+  <default_source>mesher</default_source>
+  <parameter name="filename" type="string">half_meshed.vtu</parameter>
+</algorithm>
+
